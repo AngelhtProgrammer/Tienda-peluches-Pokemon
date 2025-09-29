@@ -40,8 +40,9 @@ loginRouter.post('/', async (req, res) =>{
         httpOnly: true,
      });
 
+return res.status(200).json({ message: 'Login exitoso' });
 
-    return res.status(200);
+    // return res.status(200);
     
 });
 
