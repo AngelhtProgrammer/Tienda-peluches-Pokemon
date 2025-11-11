@@ -8,7 +8,11 @@ const userSchema = new mongoose.Schema({
     verified: {
         type: Boolean,
         default: false
-    }
+    },
+    todos: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'todo'
+        }]
 });
 
 //MONGO DB CREA UN ID POR DEFAULT ID_ Y POR ESO SE DEVUELVE EL .ID

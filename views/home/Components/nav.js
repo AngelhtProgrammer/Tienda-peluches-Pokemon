@@ -2,7 +2,7 @@ const navbar = document.querySelector('#navbar');
 
 const createNavHome = () => {
     navbar.innerHTML = `<div class="max-width-7xl h-16 mx-auto flex items-center px-4 justify-between">
-                            <a href="/" class="font-bold text-sm text-white">TodoApp</a>
+                            <a href="/" class="font-bold text-sm text-white"><img src="/img/pokebola.png" width="50px" alt=""></a>
 
                             <!-- version mobile -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 md:hidden text-white cursor-pointer p-2 rounded-lg">
@@ -23,7 +23,7 @@ const createNavHome = () => {
 
 const createNavSignunp = () => {
     navbar.innerHTML = `<div class="max-width-7xl h-16 mx-auto flex items-center px-4 justify-between">
-                            <a href="/" class="font-bold text-sm text-white">TodoApp</a>
+                            <a href="/" class="font-bold text-sm text-white"><img src="/img/pokebola.png" width="50px" alt=""></a>
 
                             <!-- version mobile -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 md:hidden text-white cursor-pointer p-2 rounded-lg">
@@ -42,7 +42,7 @@ const createNavSignunp = () => {
 
 const createNavLogin = () => {
     navbar.innerHTML = `<div class="max-width-7xl h-16 mx-auto flex items-center px-4 justify-between">
-                            <a href="/" class="font-bold text-sm text-white">TodoApp</a>
+                            <a href="/" class="font-bold text-sm text-white"><img src="/img/pokebola.png" width="50px"  alt=""></a>
 
                             <!-- version mobile -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 md:hidden text-white cursor-pointer p-2 rounded-lg">
@@ -59,9 +59,9 @@ const createNavLogin = () => {
                         </div>`;
 };
 
-const createNavTodos = () => {
+const createNavinicio = () => {
     navbar.innerHTML = `<div class="max-width-7xl h-16 mx-auto flex items-center px-4 justify-between">
-                            <a href="/" class="font-bold text-sm text-white">TodoApp</a>
+                            <a href="/" class="font-bold text-sm text-white"><img src="/img/pokebola.png" width="50px" alt=""></a>
 
                             <!-- version mobile -->
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 md:hidden text-white cursor-pointer p-2 rounded-lg">
@@ -84,8 +84,8 @@ if(window.location.pathname === '/') {
     createNavSignunp()
 } else if (window.location.pathname === '/login/') {
     createNavLogin();
-} else if (window.location.pathname === '/todos/') {
-    createNavTodos();
+} else if (window.location.pathname === '/inicio/') {
+    createNavinicio();
 }
 
 const navBtn = navbar.children[0].children[1];

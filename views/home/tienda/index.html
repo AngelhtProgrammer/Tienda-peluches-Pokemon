@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  <title>Centro Pokémon</title>
+</head>
+  <div id="float">
+    <a id="flecha" href="#nav"><h1>⬆</h1></a>
+  </div>
+<header>
+  <div id="nav">
+    <div>
+      <img id="pokebola" src="/img/pokebola.png" width="50px" />
+    </div>
+    <div id="links">
+      <p id="inicio" class="linksP">Inicio</p>
+      <p id="tienda" class="linksP">Tienda</p>
+      <p id="carrito" class="linksP">Carrito</p>
+      <a class="linksP" href="#abajo">Contacto</a>
+    </div>
+    </div>
+     <section class="cart">
+      <table>
+        <thead>
+          <tr>
+            <th class="tableTitle">Imagen</th>
+            <th class="tableTitle">Producto</th>
+            <th class="tableTitle">Cantidad</th>
+            <th class="tableTitle">Precio Unitario</th>
+            <th class="tableTitle">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="clearTable">Vaciar Carrito</button>
+      <button id="comprar">Comprar</button>
+    </section>
+  </header>
+<body>
+    <h1>Tienda</h1>
+    <section id="catalogo">
+    <div class="contenedorProductos">
+      <ul id="listaProductos">
+        <div class="division">
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/eevee.jpg" alt="producto-1" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Eevee</p>
+            <p>Precio:</p>
+            <p class="precio">45$</p> 
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>  
+  
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/pikachu.jpg" alt="producto-2" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+              <p>Peluche de Pikachu</p>
+            <p>Precio:</p>
+            <p class="precio">50$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+            
+          </li>   
+        
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/gengar.jpg" alt="producto-3" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Gengar</p>
+            <p>Precio:</p>
+            <p class="precio">45$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+          </li>   
+        </div>
+        <div class="division">
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/espeon.webp" alt="producto-4" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Espeon</p>
+            <p>Precio:</p>
+            <p class="precio">30$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>   
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/umbreon.webp" alt="producto-5" class="imgPokemon" width="300px" height="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Umbreon</p>
+            <p>Precio:</p>
+            <p class="precio">30$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>   
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/mimikyu.jpg" alt="producto-6" class="imgPokemon" width="300px" height="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Mimikyu</p>
+            <p>Precio:</p>
+            <p class="precio">30$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+          </li>   
+        </div>
+        <div class="division">
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/bulbasaur.webp" alt="producto-7" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Bulbasaur</p>
+            <p>Precio:</p>
+            <p class="precio">40$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>   
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/charmander.webp" alt="producto-8" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Charmander</p>
+            <p>Precio:</p>
+            <p class="precio">40$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>   
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/squirtle.webp" alt="producto-9" class="imgPokemon" width="300px" height="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Squirtle</p>
+            <p>Precio:</p>
+            <p class="precio">40$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+          </li>   
+        </div>
+        <div class="division">
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/snorlax.webp" alt="producto-10" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Snorlax</p>
+            <p>Precio:</p>
+            <p class="precio">30$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>   
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/magikarp.jpg" alt="producto-11" class="imgPokemon" width="300px" height="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Magikarp</p>
+            <p>Precio:</p>
+            <p class="precio">35$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>   
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/jigglypuff.jpg" alt="producto-12" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Jigglypuff</p>
+            <p>Precio:</p>
+            <p class="precio">30$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+          </li>   
+        </div>
+        <div class="division">
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/lucario.jpg" alt="producto-13" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Lucario</p>
+            <p>Precio:</p>
+            <p class="precio">40$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>   
+        <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/rayquaza.jpg" alt="producto-14" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Rayquaza</p>
+            <p>Precio:</p>
+            <p class="precio">45$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+         </li>  
+         <li class="productosLi">
+      <div class="productos">
+            <img src="/img/peluches/mew.webp" alt="producto-15" class="imgPokemon" width="300px" /></div>
+            <div class="infoProductos">
+            <p>Peluche de Mew</p>
+            <p>Precio:</p>
+            <p class="precio">40$</p>
+            <input type="number" class="cantidad" min="1" value="1"/>
+            <button class="enviarC">Agregar al carrito</button>
+            </div>
+          </li>     
+        </div>
+      </ul>      
+    </section>
+</body>
+<footer id="abajo">
+    <div class="redes">
+      <p>Correo: CentropokemonVNZ@gmail.com</p>
+  <p>Ubicación: Venezuela, Caracas, estación Miranda</p>
+    </div>
+    <div class="redes">
+      <h3>Elaborado por:</h3>
+      <p>Ángel Hernández</p>
+      <a href="https://github.com/AngelhtProgrammer/Tienda-peluches-Pokemon" target="_blank"
+        ><img src="/img/github.png" alt="GitHub" width="70px"
+      /></a>
+    </div>
+  </footer>
+    <script src="index.js"></script>
+</html>

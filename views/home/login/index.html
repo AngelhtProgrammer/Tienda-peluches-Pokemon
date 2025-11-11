@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="/styles/output.css" />
+    <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <body class="bg-zinc-50">
+  <body >
     <nav
       id="navbar"
-      class="fixed top-0 left-0 right-0 bg-indigo-700 h-16"
     ></nav>
     <div
       class="flex pt-16 h-screen max-w-7xl mx-auto justify-center items-center px-4"
     >
       <div class="hidden lg:flex w-2/4 justify-center items-center px-4">
-        <img class="w-3/4" src="/img/signup.svg" alt="image" />
+        <img class="foto" src="/img/Foto.jpg" alt="image" />
       </div>
       <form
         id="form"
@@ -25,7 +25,7 @@
       >
         <div class="flex flex-col gap-2">
           <label class="font-bold" for="email-input"
-            >Email <span class="text-red-500 text-zinc-900">*</span></label
+            >Email <span>*</span></label
           >
           <input
             id="email-input"
@@ -37,7 +37,7 @@
         </div>
         <div class="flex flex-col gap-2">
           <label class="font-bold" for="password-input"
-            >Contraseña <span class="text-red-500 text-zinc-900">*</span></label
+            >Contraseña <span>*</span></label
           >
           <input
             id="password-input"

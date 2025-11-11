@@ -13,7 +13,7 @@ loginForm.addEventListener('submit',async (e) => {
         password: passwordInput.value
     };
     await axios.post('/api/login', user);
-     window.location.pathname = '/todos/';
+     window.location.pathname = '/inicio/';
     
     
     } catch (error) {

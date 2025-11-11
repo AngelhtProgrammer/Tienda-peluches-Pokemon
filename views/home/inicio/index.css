@@ -1,0 +1,244 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(199, 0, 0, 0.829);
+    width: 100%;
+     font-family: Arial, Helvetica, sans-serif;
+}
+#pokebola{
+    margin: 10px;
+
+}
+#links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    font-size: larger;
+    font-weight: bold;
+}
+.linksP{
+    cursor: pointer;
+    color: black;
+    padding: 5px;
+    margin: 10px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    transform: 0.8s;
+    text-decoration: none;
+}
+.linksP:hover{
+    background-color: red;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+body{
+    background-color: rgba(175, 175, 175, 0.829);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#entrada{
+    display: flex;
+    background-image: url("/img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(61, 61, 61, 0.767);
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+}
+#boton{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(196, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: 0.8s;
+}   
+#boton:hover{
+    background-color: red;
+    transition: 0.8s;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 48px;
+    font-weight: bold;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 36px;
+    font-weight: bold;
+}
+#popular{
+    color: white;
+   background-color: red;
+   border: 3px solid;
+   border-color: black;
+   width: 40%;
+   border-radius: 5px;
+}
+#ventas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    width: 80%;
+}
+.Productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(61, 61, 61, 0.651);
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.enviarC{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(196, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: 0.8s;
+}
+.enviarC:hover{
+    background-color: red;
+    transition: 0.8s;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(199, 0, 0, 0.829);
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+}
+.redes{
+    background-color: rgba(192, 192, 192, 0.651);
+    border: 3px solid;
+   border-color: black;
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+
+@media(max-width: 768px){
+    #ventas{
+        flex-direction: column;
+        width: 100%;
+    }
+    .Productos{
+        width: 80%;
+    }
+    #popular{
+        width: 80%;
+    }
+    #links{
+        width: 60%;
+    }
+    #texto{
+        width: 80%;
+    }
+    #entrada{
+        height: auto;
+    }
+    body{
+        font-size: medium;
+    }
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .redes{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #abajo{
+        font-size: medium;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer{
+        height: auto;
+        padding: 20px 0;
+    }
+}
+
+
+
+@media(min-width: 768px) and (max-width: 1024px){
+    #ventas{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .redes{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     #abajo{
+        font-size: medium;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer{
+        height: auto;
+        padding: 20px 0;
+    }
+}

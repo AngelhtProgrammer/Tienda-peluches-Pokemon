@@ -7,6 +7,8 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const usersRouter = require("./controllers/users");
 const loginRouter = require("./controllers/login");
+const inicioRouter = require("./controllers/inicio");
+const tiendaRouter = require("./controllers/tienda");
 const app = express();
 const { MONGO_URI } = require('./config');
 
@@ -33,16 +35,21 @@ app.use('/', express.static(path.resolve('views', 'home')));
 app.use('/styles', express.static(path.resolve('views', 'home', 'styles')));
 app.use('/signup', express.static(path.resolve('views', 'home', 'signup')));
 app.use('/login', express.static(path.resolve('views', 'home', 'login')));
+app.use('inicio', express.static(path.resolve('views', 'home', 'inicio')));
+app.use('tienda', express.static(path.resolve('views', 'home', 'tienda')));
 app.use('/components', express.static(path.resolve('views', 'home', 'components')));
 app.use('/img', express.static(path.resolve('img')));
 app.use('/verify/:id/:token', express.static(path.resolve('views', 'home', 'verify')));
 
 
+
 app.use(morgan('tiny'));
 
 //RUTAS BACKEND
-app.use('/api/users', usersRouter)
+app.use('/api/users', usersRouter);
 app.use('/api/login', loginRouter);
+app.use('/api/inicio', inicioRouter);
+app.use('/api/tienda', tiendaRouter);
 
 
 
