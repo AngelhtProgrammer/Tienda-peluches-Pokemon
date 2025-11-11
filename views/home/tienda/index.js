@@ -5,6 +5,7 @@ const cart = document.querySelector('.cart');
 const table = document.getElementById('tableBody');
 const limpiarBtn = document.getElementById('clearTable');
 const comprarBtn = document.getElementById('comprar');
+const logoutBtn = document.querySelector('#logout');
 
 
 carritoBtn.addEventListener('click', e => {
@@ -68,6 +69,10 @@ comprarBtn.addEventListener('click', () => {
 
 inicioBtn.addEventListener('click', () => {
     window.location.href = '/inicio/';
+});
+
+logoutBtn.addEventListener('click', async e => {
+	window.location.href = '/login/';
 });
 
 
