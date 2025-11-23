@@ -31,14 +31,14 @@ app.use(cookieParser());
 
 
 //RUTAS FRONTEND
-// Rutas corregidas según la estructura real
+
 app.use('/', express.static(path.resolve('views', 'home')));
 app.use('/styles', express.static(path.resolve('views', 'home', 'styles')));
 app.use('/signup', express.static(path.resolve('views', 'home', 'signup')));
 app.use('/login', express.static(path.resolve('views', 'home', 'login')));
-app.use('inicio', express.static(path.resolve('views', 'home', 'inicio')));
-app.use('tienda', express.static(path.resolve('views', 'home', 'tienda')));
-app.use('/components', express.static(path.resolve('views', 'home', 'components')));
+app.use('/inicio', express.static(path.resolve('views', 'home', 'inicio')));
+app.use('/tienda', express.static(path.resolve('views', 'home', 'tienda')));
+app.use('/components', express.static(path.resolve('views', 'home', 'Components')));
 app.use('/img', express.static(path.resolve('img')));
 app.use('/verify/:id/:token', express.static(path.resolve('views', 'home', 'verify')));
 
