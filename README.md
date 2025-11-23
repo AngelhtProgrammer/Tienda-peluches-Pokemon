@@ -71,13 +71,6 @@ npm start
   - `PATCH /api/users/:id/:token` — verificación de cuenta (según controlador)
   - Rutas adicionales: `/api/inicio`, `/api/tienda` (controladores existentes)
 
-## Notas y recomendaciones (observaciones encontradas)
-- Revisa `app.js`: algunas rutas estáticas usan `app.use('inicio', ...)` y `app.use('tienda', ...)` sin la barra inicial. Deberían ser `app.use('/inicio', ...)` y `app.use('/tienda', ...)` para evitar problemas.
-- En varias vistas HTML el `<header>` aparece fuera del `<body>`; por validez HTML y compatibilidad es mejor mover el `<header>` dentro de `<body>`.
-- Hay una meta `viewport` mal formada en `views/home/index.html` `content="width=, initial-scale=1.0"` — corregir a `content="width=device-width, initial-scale=1.0"`.
-- Cookies: en `controllers/login.js` la cookie `accessToken` se marca `secure` solo en producción. Asegúrate de usar HTTPS en producción para que `secure: true` funcione.
-- Seguridad: no incluyas `.env` con credenciales en repositorios públicos.
-
 
 ## Ejecutar pruebas manuales rápidas
 1. Arrancar servidor: `npm run dev`

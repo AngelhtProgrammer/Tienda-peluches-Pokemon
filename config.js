@@ -1,5 +1,5 @@
 const PAGE_URL = process.env.NODE_ENV === 'production'
-    ? 'placeholder'
+    ? 'https://tienda-peluches-pokemon.onrender.com'
     : 'http://localhost:3000';
 
 
