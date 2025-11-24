@@ -121,7 +121,7 @@ tr {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 30%;
+    width: 50%;
     font-size: larger;
     font-weight: bold;
 }
@@ -170,14 +170,15 @@ h1 {
   border-radius: 5px;
 }
 #listaProductos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px;
-    gap: 100px;
-    list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+  margin: 20px;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
 }
 /* #productos{
    display: flex;
@@ -191,15 +192,15 @@ h1 {
     margin: 20px;
 } */
 .productosLi{
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(61, 61, 61, 0.651);
-    color: wheat;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(61, 61, 61, 0.651);
+  color: wheat;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0;
 }
 .infoProductos{
   display: flex;
@@ -237,9 +238,7 @@ p{
   transition: 0.8s;
 }
 .division {
-  display: flex;
-  margin: 30px;
-  gap: 50px;
+  display: contents;
 }
 
 footer {
@@ -264,76 +263,37 @@ footer {
   border-radius: 5px;
 }
 
+
 @media(max-width: 768px){
-   .division{
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .Productos{
-        width: 80%;
-    }
-    #popular{
-        width: 80%;
-    }
-    #links{
-        width: 60%;
-    }
-    #texto{
-        width: 80%;
-    }
-    #entrada{
-        height: auto;
-    }
-    body{
-        font-size: medium;
-    }
-    h1{
-        font-size: 36px;
-    }
-    h2{
-        font-size: 28px;
-    }
-    .redes{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #abajo{
-        font-size: medium;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    footer{
-        height: auto;
-        padding: 20px 0;
-    }
+  /* single column on small screens */
+  #listaProductos{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .division{ display: contents; }
+  .Productos{ width: 100%; }
+  #popular{ width: 100%; }
+  #links{ width: 80%; }
+  #texto{ width: 100%; }
+  #entrada{ height: auto; }
+  body{ font-size: medium; }
+  h1{ font-size: 36px; }
+  h2{ font-size: 28px; }
+  .redes{ width: 80%; display: flex; flex-direction: column; align-items: center; }
+  #abajo{ font-size: medium; display: flex; flex-direction: column; align-items: center; }
+  footer{ height: auto; padding: 20px 0; }
 }
 
 
+
 @media(min-width: 768px) and (max-width: 1024px){
-    .division{
-        flex-direction: column;
-        align-items: center;
-    }
-    .redes{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-     #abajo{
-        font-size: medium;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    footer{
-        height: auto;
-        padding: 20px 0;
-    }
+  /* two columns for tablet-sized screens */
+  #listaProductos{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .division{ display: contents; }
+  .redes{ width: 80%; display: flex; flex-direction: column; align-items: center; }
+  #abajo{ font-size: medium; display: flex; flex-direction: column; align-items: center; }
+  footer{ height: auto; padding: 20px 0; }
 }
 
 /* Modal styles for purchase confirmation */
@@ -370,3 +330,23 @@ footer {
 .modal-close{ background:#eee; }
 .modal-confirm{ background:#22c55e; color:white; }
 .modal-thanks{ font-size:1.1rem; padding:16px; text-align:center; font-weight:700; }
+
+
+/* Manager modal specific tweaks */
+.manager-list{ display:flex; flex-direction:column; gap:8px; max-height:40vh; overflow:auto; }
+.manager-item{ display:flex; align-items:center; gap:12px; padding:8px; border:1px solid #eee; border-radius:6px; }
+.manager-thumb img{ width:80px; height:80px; object-fit:cover; border-radius:6px; }
+.manager-actions{ margin-left:auto; display:flex; gap:8px; }
+.modal-edit{ background:#efb02d; color:#000; }
+.modal-delete{ background:#ef4444; color:#fff; }
+
+#productForm{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+#manageProducts{
+  cursor:pointer;
+  font-size: large;
+  font-weight: 700;
+}

@@ -40,7 +40,8 @@ loginRouter.post('/', async (req, res) =>{
         httpOnly: true,
      });
 
-return res.status(200).json({ message: 'Login exitoso' });
+    // Devolver también el rol del usuario para que el cliente pueda redirigir
+    return res.status(200).json({ message: 'Login exitoso', admin: userExists.admin });
 
     // return res.status(200);
     

@@ -12,13 +12,17 @@ loginForm.addEventListener('submit',async (e) => {
         email: emailInput.value,
         password: passwordInput.value
     };
-    await axios.post('/api/login', user);
-     window.location.pathname = '/inicio/';
-    
-    
+    const response = await axios.post('/api/login', user);
+    // Si el usuario es admin redirige a la vista de admin, si no a inicio (cliente)
+    if (response.data && response.data.admin) {
+        window.location.pathname = '/admin/';
+    } else {
+        window.location.pathname = '/inicio/';
+    }
+
     } catch (error) {
         console.log(error);
-        errorText.innerHTML = error.response.data.error;
+        errorText.innerHTML = error.response && error.response.data && error.response.data.error ? error.response.data.error : 'Error en el login';
     }
     
     
