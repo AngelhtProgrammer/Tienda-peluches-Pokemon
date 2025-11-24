@@ -7,8 +7,6 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const usersRouter = require("./controllers/users");
 const loginRouter = require("./controllers/login");
-const inicioRouter = require("./controllers/inicio");
-const tiendaRouter = require("./controllers/tienda");
 const app = express();
 const { MONGO_URI } = require('./config');
 
@@ -49,8 +47,6 @@ app.use(morgan('tiny'));
 //RUTAS BACKEND
 app.use('/api/users', usersRouter);
 app.use('/api/login', loginRouter);
-app.use('/api/inicio', inicioRouter);
-app.use('/api/tienda', tiendaRouter);
 
 
 
