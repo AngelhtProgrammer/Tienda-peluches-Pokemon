@@ -102,9 +102,3 @@ e.preventDefault();
     }
 });
 
-cleanInputs = () => {
-    nameInput.value = "";
-    emailInput.value = ""; 
-    passwordInput.value = "";
-    matchInput.value = "";
-} 
