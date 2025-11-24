@@ -1,4 +1,4 @@
-import { createNotification } from "../components/notification.js";
+import { createNotification } from "../Components/notification.js";
 
 const form = document.querySelector("#form");
 const nameInput = document.querySelector("#name-input");
@@ -77,7 +77,9 @@ e.preventDefault();
     // console.log(newUser);
     
     const { data } = await axios.post("/api/users", newUser);
-     createNotification(false, data);
+     // data puede ser un string o un objeto { message: '...' }
+     const message = data && data.message ? data.message : data;
+     createNotification(false, message);
       setTimeout(() => {
         notification.innerHTML = "";
       }, 3000);
